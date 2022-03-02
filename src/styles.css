@@ -1,0 +1,28 @@
+.center {
+  justify-content: center;
+}
+
+.btnSubmit {
+  width: 50%;
+  display: block;
+  margin: auto;
+}
+.frmMain {
+  margin-top: 5vh;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+  min-height: 60vh;
+  background-color: #f8f9fa;
+}
+
+@media all and (min-width: 960px) {
+  .frmMain {
+    max-width: 800px;
+  }
+}
+
+@media all and (min-width: 770px) {
+  .btnSubmit {
+    width: 100%;
+  }
+}

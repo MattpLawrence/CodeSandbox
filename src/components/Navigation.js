@@ -8,7 +8,7 @@ function Navigation(props) {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand">Matt Lawrence</a>
+          <a className="navbar-brand">ShortURL</a>
           <button
             className="navbar-toggler"
             type="button"

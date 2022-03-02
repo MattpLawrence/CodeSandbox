@@ -27,8 +27,8 @@ function ShortUrl() {
   return (
     <div>
       <Navigation />
-      <div className="row center">
-        <div className="row justify-content-md-center">
+      <div className="row ">
+        <div className="row justify-content-center">
           <div className="col-10 frmMain ">
             <h1>What URl would you like to shorten?</h1>
             <Form addListItem={addListItem} />

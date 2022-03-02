@@ -30,16 +30,21 @@ function Form(props) {
   return (
     <div>
       <form className="frmUrl" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Add to your bucket list"
-          value={input}
-          name="text"
-          className="bucket-input"
-          onChange={handleChange}
-        ></input>
-
-        <button className="btnSubmit">Shorten Me</button>
+        <div className="row justify-content-center">
+          <div className="col-md-8">
+            <input
+              type="text"
+              placeholder="Add a URL to shorten..."
+              value={input}
+              name="text"
+              className="form-control"
+              onChange={handleChange}
+            ></input>
+          </div>
+          <div className=" col-md-3 below">
+            <button className="btnSubmit btn btn-primary">Shorten Me</button>
+          </div>
+        </div>
       </form>
     </div>
   );
