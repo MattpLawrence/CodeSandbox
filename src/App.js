@@ -1,10 +1,12 @@
 import "./styles.css";
 import Page from "./components/Page";
 
-export default function App() {
+function App() {
   return (
     <div className="App">
       <Page />
     </div>
   );
 }
+
+export default App;
