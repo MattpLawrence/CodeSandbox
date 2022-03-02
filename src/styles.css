@@ -40,10 +40,14 @@ ol li {
   margin-bottom: 0.3rem;
 }
 
+.listRow {
+  width: 100%;
+}
+
 .faIcon {
   font-size: 2rem;
   transition: all 0.2s ease-in-out;
-  margin-left: 1rem;
+  margin: auto;
   color: rgba(0, 0, 0, 0.55);
   display: block;
 }

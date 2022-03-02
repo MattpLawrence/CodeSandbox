@@ -11,16 +11,24 @@ function List(props) {
           className="list-group-item d-flex justify-content-between align-items-start"
           key={item.id}
         >
-          <div className="ms-2 me-auto">
-            <div className="fw-bold">{item.fullUrl}</div>
-            {item.shortUrl}
+          <div className="row justify-content-center listRow">
+            <div className="col-sm-8">
+              <div className="ms-2 me-auto">
+                <div className="fw-bold">{item.fullUrl}</div>
+                {item.shortUrl}
+              </div>
+            </div>
+            <div className="col-sm-1">
+              <p onClick={() => props.copyToClip(item.id)}>
+                <FontAwesomeIcon icon={faCopy} className="faIcon" />
+              </p>
+            </div>
+            <div className="col-sm-1">
+              <p onClick={() => props.removeListItem(item.id)}>
+                <FontAwesomeIcon icon={faTrash} className="faIcon" />
+              </p>
+            </div>
           </div>
-          <p onClick={() => props.copyToClip(item.id)}>
-            <FontAwesomeIcon icon={faCopy} className="faIcon" />
-          </p>
-          <p onClick={() => props.removeListItem(item.id)}>
-            <FontAwesomeIcon icon={faTrash} className="faIcon" />
-          </p>
         </li>
       </ol>
     </div>
