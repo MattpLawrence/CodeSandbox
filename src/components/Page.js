@@ -30,7 +30,7 @@ function ShortUrl() {
       <div className="row ">
         <div className="row justify-content-center">
           <div className="col-10 frmMain ">
-            <h1>What URl would you like to shorten?</h1>
+            <h3 className="frmHeader">Enter Your URL</h3>
             <Form addListItem={addListItem} />
             <List urlList={urlList} removeListItem={removeListItem} />
           </div>
