@@ -32,10 +32,10 @@ function ShortUrl() {
   };
 
   return (
-    <div>
+    <div className="full">
       <Navigation />
-      <div className="row ">
-        <div className="row justify-content-center">
+      <div className="row align">
+        <div className="row justify-content-center align">
           <div className="col-10 frmMain ">
             <h3 className="frmHeader">Enter Your URL</h3>
             <Form addListItem={addListItem} />

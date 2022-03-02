@@ -5,6 +5,14 @@
   text-align: left;
 }
 
+.full {
+  background-image: url("/public/images/backgroundVirt.jpg");
+  height: 100vh;
+}
+.align {
+  margin-left: 0 !important;
+}
+
 .btnSubmit {
   width: 50%;
   display: block;
@@ -37,6 +45,7 @@ ol li {
   transition: all 0.2s ease-in-out;
   margin-left: 1rem;
   color: rgba(0, 0, 0, 0.55);
+  display: block;
 }
 .faIcon:hover {
   color: #4aaeca;
@@ -58,5 +67,9 @@ ol li {
   .btnSubmit {
     width: 100%;
     margin-top: 0rem;
+  }
+  .full {
+    max-width: 1668px;
+    background-image: url("/public/images/backgroundDesk.jpg");
   }
 }
