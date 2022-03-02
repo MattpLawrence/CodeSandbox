@@ -1,6 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 function List(props) {
   console.log(props.urlList);
@@ -11,9 +9,7 @@ function List(props) {
         {item.shortUrl}
       </div>
 
-      <p onClick={() => props.removeListItem(item.id)}>
-        <FontAwesomeIcon icon={faTrash} className="faIcon" />
-      </p>
+      <p onClick={() => props.removeListItem(item.id)}> 🗑️</p>
     </div>
   ));
 }

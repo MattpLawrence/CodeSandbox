@@ -1,21 +1,19 @@
 import React, { useState } from "react";
+import Navigation from "./Navigation";
 import List from "./List";
 import Form from "./Form";
 
 function ShortUrl() {
-  //set state. I will use a state array to show functionality as if it were connected to the back end.
   const [urlList, setUrlList] = useState([]);
 
   const addListItem = (item) => {
     // check to see if anything is coming back from input
-    console.log(item);
     if (!item.fullUrl) {
       return;
     }
 
     // add item to top of the array
     const newList = [item, ...urlList];
-    console.log(newList);
     setUrlList(newList);
   };
 
@@ -28,9 +26,16 @@ function ShortUrl() {
 
   return (
     <div>
-      <h1>What URl would you like to shorten?</h1>
-      <Form addListItem={addListItem} />
-      <List urlList={urlList} removeListItem={removeListItem} />
+      <Navigation />
+      <div className="row center">
+        <div className="row justify-content-md-center">
+          <div className="col-10 frmMain ">
+            <h1>What URl would you like to shorten?</h1>
+            <Form addListItem={addListItem} />
+            <List urlList={urlList} removeListItem={removeListItem} />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

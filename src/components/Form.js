@@ -29,7 +29,7 @@ function Form(props) {
   };
   return (
     <div>
-      <form className="bucket-form" onSubmit={handleSubmit}>
+      <form className="frmUrl" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Add to your bucket list"
@@ -39,7 +39,7 @@ function Form(props) {
           onChange={handleChange}
         ></input>
 
-        <button className="bucket-button">Add bucket list item</button>
+        <button className="btnSubmit">Shorten Me</button>
       </form>
     </div>
   );
