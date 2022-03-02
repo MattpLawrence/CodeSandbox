@@ -23,6 +23,13 @@ function ShortUrl() {
 
     setUrlList(updateList);
   };
+  const copyToClip = (id) => {
+    console.log("trigger");
+    const clipItem = urlList.filter((item) => item.id == id);
+    const clipVal = clipItem[0].shortUrl;
+
+    navigator.clipboard.writeText(clipVal);
+  };
 
   return (
     <div>
@@ -32,7 +39,11 @@ function ShortUrl() {
           <div className="col-10 frmMain ">
             <h3 className="frmHeader">Enter Your URL</h3>
             <Form addListItem={addListItem} />
-            <List urlList={urlList} removeListItem={removeListItem} />
+            <List
+              urlList={urlList}
+              removeListItem={removeListItem}
+              copyToClip={copyToClip}
+            />
           </div>
         </div>
       </div>
