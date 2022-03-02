@@ -5,25 +5,23 @@ function Form(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    function newShortUrl(length) {
+    (() => {
       var result = "";
       var characters =
         "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-      var charactersLength = characters.length;
-      for (var i = 0; i < length; i++) {
-        result += characters.charAt(
-          Math.floor(Math.random() * charactersLength)
-        );
-      }
-      return result;
-    }
 
-    props.addListItem({
-      id: Math.random(Math.floor() * 1000),
-      fullUrl: input,
-      shortUrl: newShortUrl
-    });
-    setInput("");
+      for (var i = 0; i < 8; i++) {
+        result += characters.charAt(Math.floor(Math.random() * 8));
+      }
+      let shortUrl = result;
+
+      props.addListItem({
+        id: Math.random(Math.floor() * 1000),
+        fullUrl: input,
+        shortUrl: shortUrl
+      });
+      setInput("");
+    })();
   };
 
   const handleChange = (e) => {
@@ -31,7 +29,7 @@ function Form(props) {
   };
   return (
     <div>
-      <form className="frmList" onSubmit={handleSubmit}>
+      <form className="bucket-form" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Add to your bucket list"
@@ -40,7 +38,8 @@ function Form(props) {
           className="bucket-input"
           onChange={handleChange}
         ></input>
-        <button className="btnSubmit">Shorten Me</button>
+
+        <button className="bucket-button">Add bucket list item</button>
       </form>
     </div>
   );
